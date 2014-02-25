@@ -16,7 +16,8 @@ body {
 	background: rgba(255,255,255,.8);	
 	width: 75%;
 	margin: 0px auto;
-	
+	overflow: auto;
+/*	height: 100%;*/
 }
 
 body {
@@ -43,6 +44,10 @@ body {
 
 /* Phone CSS goes here */
 @media screen and (max-width: 1224px) {
+	#phoneNav {
+		margin-bottom: 0px;
+	}
+	
 	#largeNav {
 		display: none;
 	}

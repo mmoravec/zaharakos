@@ -35,7 +35,7 @@
 	</nav>
 	<div id="content">
 	{{renderRouter}}
-	</div>
+<!--	</div>-->
 </body>
 
 <template name="hello">
@@ -57,9 +57,16 @@
 
 <template name="admin">
 	{{#if loggedIn}}
-		put inserting and deleting news items in here
+		<div class="edit-news-item">
+			{{#each items}}
+				<h3>{{title}}</h3>
+				<br />
+				<p>{{text}}</p>
+			{{/each}}	
+		</div>
+		{{loginButtons}}
 	{{else}}
-		put the login screen here
+		{{loginButtons}}
 	{{/if}}
 </template>
 

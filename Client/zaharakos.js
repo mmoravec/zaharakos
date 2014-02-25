@@ -5,6 +5,10 @@ Router.configure({
 	autoRender: false
 });
 
+Accounts.config({
+	forbidClientAccountCreation: true
+});
+
 Router.map(function() {
 	this.route('admin', {
 		path: '/admin'
@@ -39,25 +43,23 @@ if (Meteor.isClient) {
     }
   });
   
+  /* News Template */
   Template.news.items =  function() {
 	  return News.find({});
   };
   
+  /*Admin Template */
   Template.admin.events({
-	'click #btnLogOut': function(event, template) {
-		if (Meteor.userId()) {
-			Meteor.logout();
-		} else {
-			var userName = template.find('#username').value,
-			 userPassword = template.find('#password').value;
-			Meteor.loginWithPassword(userName, userPassword, function (error) {
-				if (error) {
-					console.log(error);
-				}
-			});
-		}
-	}
+
   });
+  
+  Template.admin.loggedIn = function() {
+	  return Meteor.userId();
+  }
+  
+  Template.admin.items = function() {
+	  return News.find();
+  };
 }
 
 
