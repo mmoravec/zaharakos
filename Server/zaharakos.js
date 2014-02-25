@@ -5,11 +5,13 @@ if (Meteor.isServer) {
 	  if(!News.find({})) {
 		  News.insert({"title": "Ice Cream", "text": "Ice Cream so good i eat nom nom nom"});
 	  }
-	  Accounts.createUser({
-		  username: "admin",
-		  email: "moravecmj@yahoo.com",
-		  password: "zaharak0s4dmin"
-	  });
+	  if(!Accounts.find()) {
+		  Accounts.createUser({
+			  username: "admin",
+			  email: "moravecmj@yahoo.com",
+			  password: "zaharak0s4dmin"
+		  });		  
+	  }
   });
   
 }
