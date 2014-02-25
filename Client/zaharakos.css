@@ -1,0 +1,49 @@
+/* CSS declarations go here */
+html {
+	background: url("/Background-Picture-Large.jpg") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+body {
+	background-color: transparent;	
+}
+
+#content {
+	background: rgb(255,255,255) transparent !important;
+	background: rgba(255,255,255,.8);	
+	width: 75%;
+	margin: 0px auto;
+	
+}
+
+body {
+	background-color: none !important;
+}
+
+.phone {
+	color: red;
+}
+
+/* laptop and larger size screens */
+@media screen and (min-width: 1224px) {
+	#phoneNav {
+		display: none;
+	}
+	
+	#leftNav {
+		display: block;
+		height: auto;
+		width: auto;
+		float: left;
+	}
+}
+
+/* Phone CSS goes here */
+@media screen and (max-width: 1224px) {
+	#largeNav {
+		display: none;
+	}
+}
