@@ -5,7 +5,7 @@ if (Meteor.isServer) {
 	  if(!News.find({})) {
 		  News.insert({"title": "Ice Cream", "text": "Ice Cream so good i eat nom nom nom"});
 	  }
-	  if(!Accounts.find()) {
+	  if(Meteor.users.find().count() === 0) {
 		  Accounts.createUser({
 			  username: "admin",
 			  email: "moravecmj@yahoo.com",
