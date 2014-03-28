@@ -2,7 +2,7 @@
 Router.configure({
 	loadingTemplate: 'loading',
 	notFoundTemplate: 'notFound',
-	autoRender: false
+	autoRender: true 
 });
 
 Accounts.config({

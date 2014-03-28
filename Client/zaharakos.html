@@ -28,14 +28,14 @@
 	</nav>
 	<nav id="largeNav">
 	<div id="leftNav">
-		<img src="/Left-Toolbar-Background.jpg"></img>
+		<img src="/Left-Toolbar-Background.jpg" />
 	</div>
 	<div id="rightNav">
 	</div>
 	</nav>
 	<div id="content">
-	{{renderRouter}}
-<!--	</div>-->
+		{{renderRouter}}
+	</div>
 </body>
 
 <template name="hello">
@@ -46,13 +46,13 @@
 
 <template name="news">
 	<h1> News </h1>
-	<div class="news-item">
-		{{#each items}}
+	{{#each items}}
+		<div class="news-item">
 			<h3>{{title}}</h3>
 			<br />
 			<p>{{text}}</p>
-		{{/each}}
-	</div>
+		</div>
+	{{/each}}
 </template>
 
 <template name="admin">
@@ -64,9 +64,9 @@
 				<p>{{text}}</p>
 			{{/each}}	
 		</div>
-		{{loginButtons}}
+		{{> loginButtons}}
 	{{else}}
-		{{loginButtons}}
+		{{> loginButtons}}
 	{{/if}}
 </template>
 
