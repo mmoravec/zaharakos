@@ -19,14 +19,17 @@ Router.map(function() {
 	});
 
 	this.route('home', {
-		template: 'hello',
-		path: '/'
+		template: 'hello'
 	});
   
 	this.route('/', {
-		template: 'hello',
-		path: '/home'
+		template: 'hello'
 	});
+	
+	this.route('eventinfo', {
+		path: '/eventinfo'
+	});
+
 });
 
 if (Meteor.isClient) {
@@ -60,6 +63,7 @@ if (Meteor.isClient) {
   Template.admin.items = function() {
 	  return News.find();
   };
+
 }
 
 

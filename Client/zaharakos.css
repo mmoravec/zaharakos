@@ -39,6 +39,7 @@ body {
 		height: auto;
 		width: auto;
 		float: left;
+		background-image: "../public/homepage/righttoolbar.png" no-repeat;
 	}
 }
 
