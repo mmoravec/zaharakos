@@ -19,13 +19,15 @@ Router.map(function() {
 	});
 
 	this.route('home', {
-		template: 'hello'
+		path: '/',
+		layoutTemplate: 'complexLayout',
+		yieldTemplates: {
+			'topNav': {to: 'menu'},
+			'footer': {to: 'footer'},
+		},	
+		
 	});
-  
-	this.route('/', {
-		template: 'hello'
-	});
-	
+ 
 	this.route('eventinfo', {
 		path: '/eventinfo'
 	});

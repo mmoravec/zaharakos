@@ -3,6 +3,21 @@
 </head>
 
 <body>
+</body>
+
+<template name="complexLayout">
+	<div class="topnav">
+		{{> yield region='menu'}}
+	</div>
+	<div class="content">
+		{{> yield}}
+	</div>
+	<div class="footer">
+		{{> yield region='footer'}}
+	</div>
+</template>
+
+<template name="topNav">
 	<nav id="phoneNav" class="navbar navbar-default phone" role="navigation">
 	  <div class="container-fluid">
 	    <!-- Brand and toggle get grouped for better mobile display -->
@@ -29,12 +44,14 @@
 	<nav id="largeNav">
 		<div id="leftNav">
 		</div>
+		<div id="zlogo">
+		</div>
 		<div id="rightNav">
 		</div>
 	</nav>
-</body>
+</template>
 
-<template name="hello">
+<template name="home">
   <h1>Hello World!</h1>
   {{greeting}}
   <input type="button" value="Click" />
@@ -66,6 +83,13 @@
 	{{/if}}
 </template>
 
+
 <template name="eventinfo">
 <iframe src="https://www.google.com/calendar/embed?src=86mrsnqjq0g3o15n2p1ok169nc%40group.calendar.google.com&ctz=America/New_York" style="border: 0" width="450" height="300" frameborder="0" scrolling="no"></iframe>
+</template>
+
+
+<template name='footer'>
+	<div id="zfooter">
+	</div>
 </template>
