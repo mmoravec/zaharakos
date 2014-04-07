@@ -24,6 +24,7 @@ Router.map(function() {
 		yieldTemplates: {
 			'topNav': {to: 'menu'},
 			'footer': {to: 'footer'},
+			'social': {to: 'social'}
 		},	
 		
 	});
