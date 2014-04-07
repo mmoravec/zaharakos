@@ -26,6 +26,12 @@ Router.map(function() {
 			'footer': {to: 'footer'},
 			'social': {to: 'social'}
 		},	
+		onAfterAction: function() {
+			jQuery.getScript("js/jquery.roundabout.min.js")
+				.done(function() {
+					$('.roundabout').roundabout();
+				});
+		}
 		
 	});
  
@@ -37,18 +43,10 @@ Router.map(function() {
 
 if (Meteor.isClient) {
 
-  Template.hello.greeting = function () {
-    return "Welcome to zaharakos.";
-  };
+  /* Home Template */
 
-  Template.hello.events({
-    'click input' : function () {
-      // template data, if any, is available in 'this'
-      if (typeof console !== 'undefined')
-        console.log("You pressed the button");
-    }
-  });
-  
+
+
   /* News Template */
   Template.news.items =  function() {
 	  return News.find({});
